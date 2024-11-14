@@ -1,0 +1,9 @@
+.animate-rise {
+    transform: translateY(90px);
+    transition: transform 0.5s ease;
+  }
+  
+  .animate-rise.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }

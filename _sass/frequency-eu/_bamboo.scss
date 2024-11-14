@@ -1,0 +1,93 @@
+.jobs #BambooHR-ATS {
+    font-family: $font-family !important;
+    font-weight: 400 !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    color: $text-color !important;
+    background-color: $background-color !important;
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-font-feature-settings: "kern" 1 !important;
+    -moz-font-feature-settings: "kern" 1 !important;
+    -o-font-feature-settings: "kern" 1 !important;
+    font-feature-settings: "kern" 1 !important;
+    font-kerning: normal !important;
+
+    .BambooHR-ATS-board {
+        font-family: $font-family !important;
+        font-weight: 400 !important;
+
+        ul {
+            font-size: 18px !important;
+        }
+        h2 {
+            border-bottom: none !important;
+            color: $positive !important;
+            font-family: $font-family !important;
+            font-size: 2.4em !important;
+            font-weight: 800 !important;
+            margin-bottom: $spacer *1.8 !important;
+        }
+        a {
+            font-family: $font-family !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+            line-height: 1.2;
+            // text-transform: uppercase !important;
+        }
+
+        ul.BambooHR-ATS-Department-List {
+
+            li.BambooHR-ATS-Department-Item {
+            
+                .BambooHR-ATS-Department-Header {
+                    color: $positive !important;
+                    font-family: $font-family !important;
+                    font-size: 14px !important;
+                    margin-bottom: $spacer * 2 !important;
+                    text-align: center !important;
+                }
+                ul.BambooHR-ATS-Jobs-List {
+                    display: flex !important;
+                    justify-content: center;
+                    margin-left: 0 !important;
+                    margin-bottom: $spacer * 2 !important;
+                    padding: 2px 0 12px !important;
+
+                    @include media-query($on-500) {
+                        display: block !important;
+                    }
+
+                    li.BambooHR-ATS-Jobs-Item {
+                        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1) !important;
+                        border-radius: $border-radius !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        margin: 0 1% !important;
+                        padding: $spacer * 2 !important;
+                        height: 100px;
+                        width: 23%;
+                        text-align: center;
+
+                        @include media-query($on-700) {
+                            width: 48%;
+                        }
+                        @include media-query($on-500) {
+                            margin: 0 auto !important;
+                            width: calc(100% - (#{$spacer} *4));
+                        }
+                        
+                        .BambooHR-ATS-Location {
+                            float: none !important;
+                            font-size: 14px !important;
+                            margin-top: $spacer;
+                            padding-top: 0 !important;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

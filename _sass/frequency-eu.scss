@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+// Defaults
+
+$font-family:       "Figtree", sans-serif;
+$font-size:         18px !default;
+$small-font-size:   $font-size * 0.8;
+$font-weight:       400 !default;
+$font-weight-bold:  800 !default;
+$line-height:       1.2 !default;
+$spacer:            10px;
+$border-radius:     8px;
+
+// Colors
+
+$black:         #141414;
+$white:         #FFF;
+$grey:          #BFBFBF;
+$green:         #00A651;
+$pink:          #F20D5E;
+$purple:        #483086;
+$yellow:        #FEBD11;
+
+$primary:       $purple;
+$on-primary:    $white;
+$secondary:     $pink;
+$on-secondary:  $white;
+$tertiary:      $green;
+$on-tertiary:   $white;
+$primary-alt:   #1c607e;
+$alternate:     #737a7d;
+$positive:      $black;
+$negative:      $white;
+
+$background-color:  $white;
+$text-color:        $black;
+
+$link-color:          $primary;
+$link-color-visited:  $primary;
+$link-color-hover:    $secondary;
+
+$button-color:          $primary;
+$on-button-color:       $on-primary;
+$button-hover-color:    $secondary;
+$on-button-hover-color: $on-secondary;
+
+$table-text-color:      $text-color;
+$table-border-color:    $primary;
+$table-zebra-color:     $secondary;
+$table-header-bg-color: $primary;
+$table-header-border:   $primary;
+
+// Width of the Content Area
+
+$on-300:  300px;
+$on-400:  400px;
+$on-500:  500px;
+$on-600:  600px;
+$on-700:  700px;
+$on-800:  800px;
+$on-900:  900px;
+$on-1000: 1000px;
+$on-1100: 1100px;
+$on-1200: 1200px;
+
+$content-width: $on-1200 !default;
+
+$on-laptop: $on-800 !default;
+$on-tablet: $on-600 !default;
+$on-palm:   $on-400 !default;
+$on-mobile: $on-300 !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+      @content;
+    }
+  }
+  
+  @mixin relative-font-size($ratio) {
+    font-size: 14px * $ratio;
+  }
+  
+  // Import partials.
+  @import
+    "frequency-eu/base",
+    "frequency-eu/header",
+    "frequency-eu/footer",
+    "frequency-eu/layout",
+    "frequency-eu/content",
+    "frequency-eu/jobs",
+    "frequency-eu/animate",
+    "frequency-eu/bamboo"
+  ;
+
+
