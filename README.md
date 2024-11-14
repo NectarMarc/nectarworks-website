@@ -1,2 +1,2 @@
-# FrequecyAdvisorsEU
-Website for Frequecy Advisors EU
+# FrequencyAdvisorsEU
+Website for Frequency Advisors EU
