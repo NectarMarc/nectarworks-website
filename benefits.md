@@ -1,10 +1,10 @@
 <div class="area benefits">
     <div class="wrapper">
         <div class="containers">
-            <div class="container ben-image">
+            <div class="container ben-image animate-rise">
                 <img src="/assets/png/benefit-circle.png" alt="Frequency Circle" />
             </div>
-            <div class="container ben-list"><div class="wrapper">
+            <div class="container ben-list animate-rise"><div class="wrapper">
                 <h2>Benefits</h2>
                 <ul>
                     <li>Competitive salary</li>
