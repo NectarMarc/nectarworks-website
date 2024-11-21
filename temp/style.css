@@ -24,6 +24,18 @@ body {
     margin-bottom: 20px;
 }
 
+a {
+    background-color: #000;
+    border-radius: 999px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
 h1 {
     font-size: 2rem;
     color: #333;

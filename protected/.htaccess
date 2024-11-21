@@ -1,0 +1,8 @@
+---
+layout: null
+permalink: /protected/.htaccess
+---
+AuthType Basic
+AuthName "Protected Area"
+AuthUserFile /.htpasswd
+Require valid-user
