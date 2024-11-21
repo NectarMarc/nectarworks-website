@@ -4,7 +4,7 @@
 
 layout: home
 class: home-page
-permalink: /protected/
+permalink: /locked/
 ---
 
 {%- include_relative intro.md -%}
