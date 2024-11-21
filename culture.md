@@ -5,7 +5,7 @@
             <div class="container animate-rise">
                 <span class="material-symbols-outlined header-icon our-culture">diversity_3</span>
                 <h4>Our Culture</h4>
-                <p>We are passionate about building and operating  the best L2. We are committed to delivering the best experience to our customers. We cultivate an inclusive and creative environment. We respect each other and support each other. Driven by clear objectives, we celebrate our successes together, embracing each milestone as a team.</p>
+                <p>We are passionate about building the best L2. We are committed to delivering the best experience to our customers. We cultivate an inclusive and creative environment. We respect each other and support each other. Driven by clear objectives, we celebrate our successes together, embracing each milestone as a team.</p>
                 <img src="/assets/png/divider-lines-short.png" class="c-lines-short" alt="Colored Lines" />
             </div>
             <div class="container animate-rise">
