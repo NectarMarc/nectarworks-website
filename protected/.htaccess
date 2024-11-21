@@ -1,8 +1,0 @@
----
-layout: null
-permalink: /protected/.htaccess
----
-AuthType Basic
-AuthName "Protected Area"
-AuthUserFile /httpdocs/_site/temp/.htpasswd
-Require valid-user
