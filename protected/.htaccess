@@ -4,5 +4,5 @@ permalink: /protected/.htaccess
 ---
 AuthType Basic
 AuthName "Protected Area"
-AuthUserFile /.htpasswd
+AuthUserFile /protected/.htpasswd
 Require valid-user
