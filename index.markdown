@@ -4,7 +4,6 @@
 
 layout: home
 class: home-page
-permalink: /locked/
 ---
 
 {%- include_relative intro.md -%}

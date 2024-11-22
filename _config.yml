@@ -49,3 +49,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude: [jekyll,jobs,jobs-links-orig.md,jobs.md,about.markdown]
