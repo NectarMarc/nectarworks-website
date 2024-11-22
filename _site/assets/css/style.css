@@ -1018,7 +1018,7 @@ p.copyright {
 
 .cta {
   background-attachment: fixed;
-  background-image: url(/assets/jpg/freq-red-room-xe.jpg);
+  background-image: url(/assets/jpg/FAEU_ROOM_XL.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1031,7 +1031,7 @@ p.copyright {
 }
 @media screen and (max-width: 800px) {
   .cta {
-    background-image: url(/assets/jpg/freq-red-room-s.jpg);
+    background-image: url(/assets/jpg/FAEU_ROOM_SQ.jpg);
   }
 }
 .cta .cta-content {
