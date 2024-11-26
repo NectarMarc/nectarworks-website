@@ -1048,6 +1048,15 @@ p.copyright {
   display: inline-flex;
 }
 
+.hidden {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
 .jobs-page .card {
   margin: 40px 0;
   padding: 40px;

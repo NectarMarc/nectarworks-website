@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include profile_head.html -%}
+
+  <body class="profile-page">
+  
+    {%- include profile_header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      {{ content }}
+    </main>
+
+    <!-- Show login/logout buttons only on pages in the /profile/ folder -->
+    <button id="login">Login</button>
+    <button id="logout">Logout</button>
+    <div id="protected-content"></div>
+
+    {%- include profile_footer.html -%}
+
+    {%- include scripts.html -%}
+
+  </body>
+
+</html>

@@ -17,6 +17,14 @@
       {{ content }}
     </main>
 
+    <!-- Show login/logout buttons only on pages in the /profile/ folder -->
+    {% if page.url contains '/profile/' %}
+      <button id="login">Login</button>
+      <button id="logout">Logout</button>
+      <div id="protected-content"></div>
+    {% endif %}
+
+
     {%- include footer.html -%}
 
     {%- include scripts.html -%}
