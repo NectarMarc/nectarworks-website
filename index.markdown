@@ -4,6 +4,7 @@
 
 layout: home
 class: home-page
+id: home
 ---
 
 {%- include_relative intro.md -%}

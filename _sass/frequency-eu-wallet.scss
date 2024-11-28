@@ -29,11 +29,11 @@ $tertiary:      $green;
 $on-tertiary:   $white;
 $primary-alt:   #1c607e;
 $alternate:     #737a7d;
-$positive:      $black;
-$negative:      $white;
+$positive:      $white;
+$negative:      $black;
 
-$background-color:  $white;
-$text-color:        $black;
+$background-color:  $black;
+$text-color:        $white;
 
 $link-color:          $primary;
 $link-color-visited:  $primary;
@@ -94,9 +94,7 @@ $on-mobile: $on-300 !default;
     "frequency-eu/footer",
     "frequency-eu/layout",
     "frequency-eu/content",
-    "frequency-eu/jobs",
-    "frequency-eu/animate",
-    "frequency-eu/bamboo"
+    "frequency-eu/animate"
   ;
 
 
