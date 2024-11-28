@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     auth0Client = await createAuth0Client({
       domain: config.domain,
       clientId: config.clientId,
-      redirect_uri: 'https://127.0.0.1:8080/profile/' // Default redirect URI
+      redirect_uri: 'https://frequencyadvisors.eu/profile/' // Default redirect URI
     });
   };
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!isAuthenticated) {
       // If not authenticated, redirect to the login page
       await auth0Client.loginWithRedirect({
-        redirect_uri: 'https://127.0.0.1:8080/profile/', // Redirect back to /profile/ after login
+        redirect_uri: 'https://frequencyadvisors.eu/profile/', // Redirect back to /profile/ after login
         appState: { targetUrl: window.location.href } // Save current page
       });
     } else {
@@ -175,7 +175,7 @@ async function requireAuth(callback, redirectUrl) {
   if (!isAuthenticated) {
     // If not authenticated, redirect to the login page
     await auth0Client.loginWithRedirect({
-      redirect_uri: 'https://127.0.0.1:8080/profile/', // Redirect back after login
+      redirect_uri: 'https://frequencyadvisors.eu/profile/', // Redirect back after login
       appState: { targetUrl: redirectUrl }
     });
   } else {
