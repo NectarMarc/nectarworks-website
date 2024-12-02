@@ -22,8 +22,8 @@ body {
   line-height: 1.2;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #FFF;
-  background-color: #141414;
+  color: #AFA1D4;
+  background-color: #08011B;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -196,8 +196,10 @@ a:hover {
 .social-media-list a:hover .username, .pagination a:hover .username {
   text-decoration: underline;
 }
-a.button {
+
+a.button, button {
   background-color: #483086;
+  border: 1px solid #FFF;
   border-radius: 999px;
   display: flex;
   font-size: 0.8rem;
@@ -207,18 +209,18 @@ a.button {
   padding: 10px 20px;
   text-transform: uppercase;
 }
-a.button span {
+a.button span, button span {
   font-size: 2em;
   margin-right: 10px;
 }
-a.button:visited {
+a.button:visited, button:visited {
   color: #FFF;
 }
-a.button:hover {
+a.button:hover, button:hover {
   background-color: #F20D5E;
   color: #FFF;
 }
-a.icon-button {
+a.button.icon-button, button.icon-button {
   padding: 10px 20px 10px 14px;
 }
 
@@ -227,7 +229,7 @@ a.icon-button {
  */
 blockquote {
   color: #483086;
-  border-left: 4px solid #FFF;
+  border-left: 4px solid #AFA1D4;
   padding-left: 5px;
   font-size: 15.75px;
   font-style: italic;
@@ -246,9 +248,9 @@ pre,
 code {
   font-family: "Figtree", sans-serif;
   font-size: 0.9375em;
-  border: 1px solid #FFF;
+  border: 1px solid #AFA1D4;
   border-radius: 3px;
-  background-color: #141414;
+  background-color: #08011B;
 }
 
 code {
@@ -267,17 +269,17 @@ pre > code {
 
 .highlight {
   border-radius: 3px;
-  background: #141414;
+  background: #08011B;
 }
 .highlighter-rouge .highlight {
-  background: #141414;
+  background: #08011B;
 }
 
 /**
  * Wrapper
  */
 .wrapper {
-  max-width: calc(1200px - (10px));
+  max-width: calc(100% - (10px));
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
@@ -285,7 +287,7 @@ pre > code {
 }
 @media screen and (min-width: 800px) {
   .wrapper {
-    max-width: calc(1200px - 10px * 2);
+    max-width: calc(100% - 10px * 2);
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -326,7 +328,7 @@ pre > code {
 table {
   margin-bottom: 10px;
   width: 100%;
-  color: #FFF;
+  color: #AFA1D4;
   border-collapse: collapse;
   border: 1px solid #483086;
 }
@@ -362,8 +364,8 @@ table td {
  * Site header
  */
 .site-header {
-  background-color: #141414;
-  color: #FFF;
+  background-color: #08011B;
+  color: #AFA1D4;
   font-weight: 300;
   font-style: normal;
   height: 80px;
@@ -491,7 +493,7 @@ table td {
  * Site footer
  */
 .site-footer {
-  background-color: #141414;
+  background-color: #08011B;
   color: #FFF;
 }
 
@@ -519,7 +521,7 @@ table td {
   max-width: 100px;
 }
 .footer-col-wrapper a {
-  color: #141414;
+  color: #000;
   margin-bottom: 5px;
 }
 .footer-col-wrapper a:hover, .footer-col-wrapper a:focus {
@@ -654,7 +656,7 @@ p.copyright {
 .social-media-list li a, .pagination li a {
   display: block;
   padding: 10px 12px;
-  border: 1px solid #FFF;
+  border: 1px solid #AFA1D4;
 }
 .social-media-list li a:hover, .pagination li a:hover {
   border-color: #483086;
@@ -689,6 +691,39 @@ p.copyright {
     width: calc(50% - 10px / 2);
   }
 }
+.login-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  text-align: center;
+}
+.login-area h1 {
+  text-transform: none;
+}
+.login-area button {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: inherit;
+  color: #483086;
+  padding: 0;
+  text-transform: none;
+}
+.nav-links button:visited {
+  color: #483086;
+}
+.nav-links button:hover {
+  background: none;
+  color: #F20D5E;
+}
+
 .content-width {
   width: 1200px;
 }
@@ -713,21 +748,22 @@ p.copyright {
   }
 }
 
-.hr {
-  background-color: #BFBFBF;
-  margin: 40px auto;
-  height: 1px;
-  width: 100%;
+#protected-content {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 120px);
+  padding: 0 20px;
 }
 
 .card {
+  background-color: #331D6E;
+  border: 1px solid #AFA1D4;
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: baseline;
   justify-content: space-between;
   border-radius: 8px;
-  box-shadow: 0 3px 6px -6px rgba(36, 91, 219, 0.14), 0 4px 8px 0 rgba(36, 91, 219, 0.06), 0 6px 18px 6px rgba(36, 91, 219, 0.04);
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   margin: 0 1%;
   padding: 20px;
@@ -736,19 +772,51 @@ p.copyright {
   transition: ease 0.5s;
 }
 
+.user-area {
+  width: 50%;
+  max-width: 200px;
+  min-height: calc(100vh - 120px);
+  margin-right: 20px;
+}
+
+.user-profile-image {
+  background-image: url("/assets/jpg/timBear.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 999px;
+}
+
+.site-header .user-profile-image {
+  width: 40px;
+  height: 40px;
+}
+
+.user-area .user-profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.hr {
+  background-color: #BFBFBF;
+  margin: 40px auto;
+  height: 1px;
+  width: 100%;
+}
+
 .c-lines {
   background-image: url("/assets/png/divider-lines.png");
   background-position: center;
   background-size: contain;
   background-repeat: repeat-x;
   height: 20px;
-  max-width: calc(1200px - (10px));
+  max-width: calc(100% - (10px));
   margin-right: auto;
   margin-left: auto;
 }
 @media screen and (min-width: 800px) {
   .c-lines {
-    max-width: calc(1200px - 10px * 2);
+    max-width: calc(100% - 10px * 2);
   }
 }
 
@@ -766,7 +834,7 @@ p.copyright {
 .grey-line {
   background-color: #BFBFBF;
   height: 1px;
-  max-width: calc(1200px - (20px));
+  max-width: calc(100% - (20px));
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
@@ -812,7 +880,7 @@ p.copyright {
 .header-icon {
   align-items: center;
   border-radius: 999px;
-  color: #141414;
+  color: #000;
   background-color: #483086;
   display: flex;
   font-size: 3em;
@@ -868,7 +936,7 @@ p.copyright {
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
-  color: #141414;
+  color: #000;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -957,7 +1025,7 @@ p.copyright {
 }
 
 .culture {
-  background-color: #141414;
+  background-color: #000;
   color: #FFF;
   text-align: center;
 }
@@ -1067,4 +1135,4 @@ label {
   transform: translateY(0);
 }
 
-/*# sourceMappingURL=wallet_style.css.map */
+/*# sourceMappingURL=profile-style.css.map */

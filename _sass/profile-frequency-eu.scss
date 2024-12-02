@@ -13,12 +13,17 @@ $border-radius:     8px;
 
 // Colors
 
-$black:         #141414;
+$black:         #000;
 $white:         #FFF;
+$off-black:     #141414;
+$off-white:     #EEEEEE;
 $grey:          #BFBFBF;
 $green:         #00A651;
 $pink:          #F20D5E;
 $purple:        #483086;
+$mid-purple:    #331D6E;
+$deep-purple:   #08011B;
+$lilac:         #AFA1D4;
 $yellow:        #FEBD11;
 
 $primary:       $purple;
@@ -32,8 +37,8 @@ $alternate:     #737a7d;
 $positive:      $white;
 $negative:      $black;
 
-$background-color:  $black;
-$text-color:        $white;
+$background-color:  $deep-purple;
+$text-color:        $lilac;
 
 $link-color:          $primary;
 $link-color-visited:  $primary;
@@ -50,6 +55,10 @@ $table-zebra-color:     $secondary;
 $table-header-bg-color: $primary;
 $table-header-border:   $primary;
 
+$card-background-color: $mid-purple;
+$card-border-color:     $lilac;
+$drop-shadow-color:     rgba(0, 0, 0, 0.1);
+
 // Width of the Content Area
 
 $on-300:  300px;
@@ -63,7 +72,7 @@ $on-1000: 1000px;
 $on-1100: 1100px;
 $on-1200: 1200px;
 
-$content-width: $on-1200 !default;
+$content-width: 100% !default;
 
 $on-laptop: $on-800 !default;
 $on-tablet: $on-600 !default;
@@ -89,12 +98,12 @@ $on-mobile: $on-300 !default;
   
   // Import partials.
   @import
-    "frequency-eu/base",
-    "frequency-eu/header",
-    "frequency-eu/footer",
-    "frequency-eu/layout",
-    "frequency-eu/content",
-    "frequency-eu/animate"
+    "profile-frequency-eu/base",
+    "profile-frequency-eu/header",
+    "profile-frequency-eu/footer",
+    "profile-frequency-eu/layout",
+    "profile-frequency-eu/content",
+    "profile-frequency-eu/animate"
   ;
 
 

@@ -3,21 +3,15 @@
 
   {%- include profile/head.html -%}
 
-  <body class="profile-page">
+  <body class="login-page">
   
     {%- include profile/header.html -%}
-
-    <div id="protected-content">
-
-      {%- include profile/user-card.md  -%}
 
       <main class="page-content" aria-label="Content">
         <div id="{{ page.id }}">
           {{ content }}
         </div>
       </main>
-
-    </div>
 
     {%- include profile/footer.html -%}
 
