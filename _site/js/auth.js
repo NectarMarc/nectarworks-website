@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
           await auth0Client.logout({
             logoutParams: {
-              returnTo: 'https://frequencyadvisors.eu/profile/login' // Redirect to login page after logout
+              returnTo: 'https://frequencyadvisors.eu/profile/login.html' // Redirect to login page after logout
             }
           });
         } catch (err) {
