@@ -1,3 +1,19 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-solid {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
 .content-width {
     width: $on-1200;
 
@@ -385,3 +401,22 @@
     margin-bottom: 10px;
     display: block;
   }
+
+// 404 Page
+
+#error {
+    a {
+        margin-top: 40px;
+        display: inline-flex;
+    }
+
+    .whoops {
+        color: $primary;
+        font-size: 100px;
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+}

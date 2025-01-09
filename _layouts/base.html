@@ -10,15 +10,22 @@
     <body>
   {%- endif -%}
 
-
+  {%- if page.class == 'home-page' -%}
+    {%- include header-scrolly.html -%}
+  {%- else -%}
     {%- include header.html -%}
-
+  {%- endif -%}
+  
     <main class="page-content" aria-label="Content">
       <div id="{{ page.id }}">
         {{ content }}
       </div>
     </main>
-    {%- include footer.html -%}
+    {%- if page.class == 'home-page' -%}
+      {%- include footer-scrolly.html -%}
+    {%- else -%}
+      {%- include footer.html -%}
+    {%- endif -%}
 
     {%- include scripts.html -%}
 
