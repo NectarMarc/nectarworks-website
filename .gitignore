@@ -2,3 +2,8 @@
 .jekyll-cache
 .jekyll-metadata
 vendor
+.terraform*
+terraform.tfstate
+*.tfstate*
+terraform.tfvars
+*.backup

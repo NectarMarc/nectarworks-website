@@ -17,17 +17,16 @@ jobs:
         run: |
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_OUTPUT
-
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::992886031159:role/github_actions
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: eu-west-1
-      
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
-      
+
       - name: Terraform Plan
       id: plan
       shell: bash
@@ -35,8 +34,6 @@ jobs:
         echo 'plan<<EOF' >> $GITHUB_OUTPUT
         terraform plan -no-color -out=tfplan >> $GITHUB_OUTPUT
         echo 'EOF' >> $GITHUB_OUTPUT
-
-
     - name: Save Artifact
       id: save-artifact
       uses: actions/upload-artifact@v3
