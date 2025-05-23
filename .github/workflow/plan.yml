@@ -31,6 +31,7 @@ jobs:
       id: plan
       shell: bash
       run: |
+        cd terraform
         echo 'plan<<EOF' >> $GITHUB_OUTPUT
         terraform plan -no-color -out=tfplan >> $GITHUB_OUTPUT
         echo 'EOF' >> $GITHUB_OUTPUT
