@@ -1,5 +1,5 @@
 provider "aws" {
-  region = var.region
+  region = "eu-west-1"
   default_tags {
     tags = {
       Environment = "Webhosting"
@@ -25,7 +25,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "freq-webhosting-tf-state-eu-west-1"
-    key            = "webhosting-infra/terraform.tfstate"
+    key            = "webhosting/terraform.tfstate"
     dynamodb_table = "terraform-state-lock"
     region         = "eu-west-1"
     encrypt        = "true"
