@@ -1,8 +1,7 @@
-<div id="site-header"></div>
-<header class="site-header">
+<header id="site-header" class="site-header">
   <div class="wrapper" id="header-wrapper">
     <a class="site-title" rel="author" href="/" alt="{{ site.title | escape }}">
-      {%- include frequency-advisors-eu-logo-invert.svg -%}
+      <div class="site-logo" aria-label="Company Logo">{% include nectarworks_logo.svg %}</div>
     </a>
     <nav class="site-nav">
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -10,12 +9,9 @@
         <span class="close-icon material-symbols-outlined">close</span>
       </button>
       <div class="nav-links" id="nav-links">
-        <a class="page-link scroll" href="#careers">Careers</a>
+        <a class="page-link scroll" href="#identity">Careers</a>
         <a class="page-link scroll" href="#about">About</a>
-        <a class="page-link" href="mailto:admin@frequencyadvisors.eu">Contact Us</a>
-        <a class="page-link" href="https://www.linkedin.com/company/frequency-advisors/" rel="nofollow noopener noreferrer" target="_blank">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
+        <a class="page-link" href="mailto:contact@nectarworks.io" target="_blank" rel="nofollower noopener noreferrer">Contact Us</a>
       </div>
     </nav>
   </div>

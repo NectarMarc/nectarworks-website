@@ -42,17 +42,6 @@
   window.addEventListener('scroll', handleScroll);
 </script>
 
-<!-- Video Autoplay for Mobile -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const mobileVideo = document.querySelector('video');
-    if (mobileVideo) {
-      mobileVideo.setAttribute('playsinline', '');
-      mobileVideo.setAttribute('muted', '');
-    }
-  });
-</script>
-
 <!-- Animate Elements on Scroll -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -67,4 +56,27 @@
 
     elements.forEach(element => observer.observe(element));
   });
+</script>
+
+<!-- Header Color Interpolation -->
+<script>
+  window.addEventListener('scroll', () => {
+  const header = document.getElementById('site-header');
+  const scrollY = window.scrollY;
+  const maxScroll = window.innerHeight / 4;
+
+  // Clamp progress between 0 and 1
+  const progress = Math.min(scrollY / maxScroll, 1);
+
+  // Interpolate between two colors (example: transparent white to solid blue)
+  const startColor = [0, 0, 0, 0.3]; // Transparent Black
+  const endColor = [0, 0, 0, 1]; // Black
+
+  const interpolatedColor = startColor.map((start, i) => {
+    const end = endColor[i];
+    return start + (end - start) * progress;
+  });
+
+  header.style.backgroundColor = `rgba(${interpolatedColor.join(',')})`;
+});
 </script>

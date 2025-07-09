@@ -7,14 +7,14 @@ class: home-page
 id: home
 ---
 
-{%- include_relative intro.md -%}
+{%- include_relative intro.markdown -%}
 <div id="about"></div>
-{%- include_relative about.md -%}
-<div class="c-lines"></div>
-<div id="careers"></div>
-{%- include_relative jobs-links.md -%}
-<div id="culture"></div>
-{%- include_relative culture.md -%}
+{%- include_relative whatwedo.markdown -%}
+<div id="identity"></div>
+{%- include_relative whoweare.markdown -%}
 <div id="benefits"></div>
-{%- include_relative benefits.md -%}
-{%- include_relative cta.md -%}
+{%- include_relative whatweoffer.markdown -%}
+<div id="culture"></div>
+{%- include_relative whyjoinus.markdown -%}
+<div id="cta"></div>
+{%- include_relative cta.markdown -%}
