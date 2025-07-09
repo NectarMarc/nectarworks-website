@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="trio animate-rise">
             <div>
-                <img src="/assets/svg/icon-glasses-hex-dark.svg" class="bannericon">
+                <img src="/assets/svg/icon-visibility-hex-dark.svg" class="bannericon">
                 <span class="bannerword">
                     Transparent
                 </span>
