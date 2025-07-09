@@ -7,3 +7,5 @@ terraform.tfstate
 *.tfstate*
 terraform.tfvars
 *.backup
+*.pem
+*.key
