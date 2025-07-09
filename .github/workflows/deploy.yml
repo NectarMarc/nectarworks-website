@@ -35,5 +35,3 @@ jobs:
           local-dir: _site/
           server-dir: /httpdocs/
           protocol: ftps
-          passive: true
-          verbose: true
