@@ -36,7 +36,7 @@
                 In-person gatherings to connect, collaborate, and have fun
             </li>
         </ul>
-        <a href="/#culture" class="button button-alt animate-rise">Our priciples</a>
+        <a href="/#culture" class="button button-alt animate-rise">Our principles</a>
     </div>
     <img src="/assets/jpg/bee-laptop-02.jpg" alt="Remote Working" />
 </div>

@@ -18,12 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Frequency Advisors Europe
-email: admin@frequencyadvisors.eu
+title: Nectarworks
+email: contact@nectarworks.io
 description: >- # this means to ignore newlines until "baseurl:"
-  We're pushing the boundaries of consumer crypto tech, creating cutting-edge blockchain dApps that redefine gaming, finance, and beyond.
+  Building the next generation of blockchain-native games - Designed for a new era of players, our games are open, social, and fuelled by curiosity. We are pushing the boundaries of consumer crypto technology: creating cutting-edge blockchain dApps that redefine gaming.
+  If you’re excited by open systems, new models of play, and the opportunity to shape something from the ground up, we’d love to hear from you.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://frequencyadvisors.eu" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://nectarworks.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
