@@ -208,7 +208,7 @@
 }
 
 .intro {
-    background-image: url('/assets/jpg/buzz-base.jpg');
+    background-image: url('/assets/jpg/hexagon-banner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -236,7 +236,6 @@
         align-items: baseline;
         justify-content: center;
         text-transform: uppercase;
-        font-size: 0.8rem;
         min-height: 100vh;
         padding: 0 40px;
 
@@ -397,10 +396,12 @@
 }
 
 .identity {
-    background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg);
-    background-position: top left, bottom right;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 300px, 300px;
+    background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg), url('/assets/png/honeycomb_border_repeat.png');
+    background-position: top left, bottom right, center;
+    background-attachment: initial, initial, fixed;
+    background-attachment: fixed;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: 300px, 300px, auto;
     display: flex;
     align-items: center;
     background-color: $grey;
@@ -432,7 +433,7 @@
     }
 
     @include media-query($on-600) {
-        background-size: 150px, 150px;
+        background-size: 150px, 150px, auto;
     }
 }
 
@@ -447,10 +448,17 @@
         margin-bottom: 40px;
     }
     li {
-        font-size: 0.8rem;
-        text-transform: uppercase;
+        font-size: 0.9rem;
         margin-top: $spacer * 1;
         line-height: 1.6;
+
+        &::marker {
+            color: $yellow;
+        }
+        strong {
+            color: $yellow;
+            text-transform: uppercase;
+        }
     }
     h4 {
         margin-top: $spacer * 4;
@@ -470,7 +478,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 50%;
-        height: 100vh;
+        height: -webkit-fill-available;
 
         @include media-query($on-800) {
             display: none;
@@ -478,7 +486,7 @@
     }
     .wrapper {
         width: 50%;
-        padding: $spacer * 4;
+        padding: $spacer * 6 $spacer * 4;
         max-width: 400px;
 
         @include media-query($on-800) {
@@ -502,9 +510,14 @@
 }
 
 .culture {
+    background-color: $yellow;
+    background-image: url('/assets/png/honeycomb_border_repeat.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
-    background-color: $yellow;
     color: $text-color;
     padding: 0;
 
@@ -512,44 +525,46 @@
         font-size: 0.8rem;
         text-transform: uppercase;
     }
-    h4 {
+    .container:nth-of-type(2) {
         margin-top: $spacer * 4;
     }
 
-    .culture-img {
-        display: flex;
-        background-image: url('/assets/png/tiny-bee.png'), url('/assets/png/honeycomb_border_repeat.png');
-        background-position: center, center;
-        background-repeat: no-repeat, repeat;
-        background-size: 30px, auto;
-        width: 40%;
-        height: 100vh;
-        min-height: 40px;
-
-        @include media-query($on-600) {
-            width: 100%;
-            height: 15vh;
-        }
-    }
+    
     .culture-img-top {
         display: flex;
         background-image: url('/assets/png/honeycomb_border_repeat.png');
         background-position: center;
         background-repeat: repeat;
         background-size: auto;
-        width: 100%;
-        height: 15vh;
-        min-height: 40px;
-        display: none;
+        width: 20%;
+        height: -webkit-fill-available;
+        min-height: 20px;
 
         @include media-query($on-600) {
-            display: block;
+            width: 100%;
+            height: 15vh;
+        }
+    }
+    .culture-img-bottom {
+        display: flex;
+        background-image: url('/assets/png/tiny-bee.png'), url('/assets/png/honeycomb_border_repeat.png');
+        background-position: center, center;
+        background-repeat: no-repeat, repeat;
+        background-size: 30px, auto;
+        width: 20%;
+        height: -webkit-fill-available;
+        min-height: 20px;
+
+        @include media-query($on-600) {
+            width: 100%;
+            height: 15vh;
         }
     }
     .wrapper {
+        background-color: $yellow;
         width: 60%;
-        padding: $spacer * 2;
-        max-width: 400px;
+        padding: $spacer * 4;
+        max-width: $spacer * 80;
 
         @include media-query($on-600) {
             width: auto;
@@ -557,12 +572,76 @@
     }
     .button {
         display: inline-block;
-        margin-top: $spacer * 4;
+        margin-top: $spacer * 2;
     }
     @include media-query($on-600) {
        flex-direction: column;
     }
 }
+
+// .culture {
+//     display: flex;
+//     align-items: center;
+//     background-color: $yellow;
+//     color: $text-color;
+//     padding: 0;
+
+//     p {
+//         font-size: 0.8rem;
+//         text-transform: uppercase;
+//     }
+//     h4 {
+//         margin-top: $spacer * 4;
+//     }
+
+    
+//     .culture-img-top {
+//         display: flex;
+//         background-image: url('/assets/png/honeycomb_border_repeat.png');
+//         background-position: center;
+//         background-repeat: repeat;
+//         background-size: auto;
+//         width: 20%;
+//         height: -webkit-fill-available;
+//         min-height: 20px;
+
+//         @include media-query($on-600) {
+//             width: 100%;
+//             height: 15vh;
+//         }
+//     }
+//     .culture-img-bottom {
+//         display: flex;
+//         background-image: url('/assets/png/tiny-bee.png'), url('/assets/png/honeycomb_border_repeat.png');
+//         background-position: center, center;
+//         background-repeat: no-repeat, repeat;
+//         background-size: 30px, auto;
+//         width: 20%;
+//         height: -webkit-fill-available;
+//         min-height: 20px;
+
+//         @include media-query($on-600) {
+//             width: 100%;
+//             height: 15vh;
+//         }
+//     }
+//     .wrapper {
+//         width: 60%;
+//         padding: $spacer * 2;
+//         max-width: 400px;
+
+//         @include media-query($on-600) {
+//             width: auto;
+//         }
+//     }
+//     .button {
+//         display: inline-block;
+//         margin-top: $spacer * 4;
+//     }
+//     @include media-query($on-600) {
+//        flex-direction: column;
+//     }
+// }
 
 .cta {
     background-color: $grey;

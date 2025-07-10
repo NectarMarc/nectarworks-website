@@ -1,5 +1,5 @@
 <div class="area culture">
-    <div class="culture-img-top"></div>
+    <!-- <div class="culture-img-top"></div> -->
     <div class="wrapper">
         <div class="container animate-rise">
             <h4>Our Culture</h4>
@@ -15,5 +15,5 @@
         </div>
         <a href="/#cta" class="button animate-rise">Join the hive</a>
     </div>
-    <div class="culture-img"></div>
+    <!-- <div class="culture-img-bottom"></div> -->
 </div>

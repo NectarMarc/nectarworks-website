@@ -9,11 +9,11 @@
             </li>
             <li>
                 <strong>Fully Remote</strong><br>
-                Enjoy the flexibility of working from anywhere
+                Enjoy the flexibility of working from home
             </li>
             <li>
                 <strong>Pension Plan</strong><br>
-                Plan for the future with our company-backed re/tirement scheme
+                Plan for the future with our company-backed retirement scheme
             </li>
             <li>
                 <strong>Private Health Insurance</strong><br>
@@ -25,7 +25,7 @@
             </li>
             <li>
                 <strong>Generous Time Off</strong><br>
-                25 days annual leave, increasing with tenure, plus 2 company-wide days off
+                25 days annual leave, increasing with tenure, plus 2 additional company days
             </li>
             <li>
                 <strong>Learning Support</strong><br>

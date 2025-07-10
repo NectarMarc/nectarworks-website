@@ -922,7 +922,7 @@ p.copyright {
   }
 }
 .intro {
-  background-image: url("/assets/jpg/buzz-base.jpg");
+  background-image: url("/assets/jpg/hexagon-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -949,7 +949,6 @@ p.copyright {
   align-items: baseline;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 0.8rem;
   min-height: 100vh;
   padding: 0 40px;
 }
@@ -1103,10 +1102,12 @@ p.copyright {
 }
 
 .identity {
-  background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg);
-  background-position: top left, bottom right;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 300px, 300px;
+  background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg), url("/assets/png/honeycomb_border_repeat.png");
+  background-position: top left, bottom right, center;
+  background-attachment: initial, initial, fixed;
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 300px, 300px, auto;
   display: flex;
   align-items: center;
   background-color: #6D6C67;
@@ -1143,7 +1144,7 @@ p.copyright {
 }
 @media screen and (max-width: 600px) {
   .identity {
-    background-size: 150px, 150px;
+    background-size: 150px, 150px, auto;
   }
 }
 
@@ -1158,10 +1159,16 @@ p.copyright {
   margin-bottom: 40px;
 }
 .benefits li {
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  font-size: 0.9rem;
   margin-top: 10px;
   line-height: 1.6;
+}
+.benefits li::marker {
+  color: #FED400;
+}
+.benefits li strong {
+  color: #FED400;
+  text-transform: uppercase;
 }
 .benefits h4 {
   margin-top: 40px;
@@ -1181,7 +1188,7 @@ p.copyright {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
-  height: 100vh;
+  height: -webkit-fill-available;
 }
 @media screen and (max-width: 800px) {
   .benefits .benefits-img {
@@ -1190,7 +1197,7 @@ p.copyright {
 }
 .benefits .wrapper {
   width: 50%;
-  padding: 40px;
+  padding: 60px 40px;
   max-width: 400px;
 }
 @media screen and (max-width: 800px) {
@@ -1214,9 +1221,14 @@ p.copyright {
 }
 
 .culture {
+  background-color: #FED400;
+  background-image: url("/assets/png/honeycomb_border_repeat.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
-  background-color: #FED400;
   color: #141414;
   padding: 0;
 }
@@ -1224,24 +1236,8 @@ p.copyright {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-.culture h4 {
+.culture .container:nth-of-type(2) {
   margin-top: 40px;
-}
-.culture .culture-img {
-  display: flex;
-  background-image: url("/assets/png/tiny-bee.png"), url("/assets/png/honeycomb_border_repeat.png");
-  background-position: center, center;
-  background-repeat: no-repeat, repeat;
-  background-size: 30px, auto;
-  width: 40%;
-  height: 100vh;
-  min-height: 40px;
-}
-@media screen and (max-width: 600px) {
-  .culture .culture-img {
-    width: 100%;
-    height: 15vh;
-  }
 }
 .culture .culture-img-top {
   display: flex;
@@ -1249,20 +1245,37 @@ p.copyright {
   background-position: center;
   background-repeat: repeat;
   background-size: auto;
-  width: 100%;
-  height: 15vh;
-  min-height: 40px;
-  display: none;
+  width: 20%;
+  height: -webkit-fill-available;
+  min-height: 20px;
 }
 @media screen and (max-width: 600px) {
   .culture .culture-img-top {
-    display: block;
+    width: 100%;
+    height: 15vh;
+  }
+}
+.culture .culture-img-bottom {
+  display: flex;
+  background-image: url("/assets/png/tiny-bee.png"), url("/assets/png/honeycomb_border_repeat.png");
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+  background-size: 30px, auto;
+  width: 20%;
+  height: -webkit-fill-available;
+  min-height: 20px;
+}
+@media screen and (max-width: 600px) {
+  .culture .culture-img-bottom {
+    width: 100%;
+    height: 15vh;
   }
 }
 .culture .wrapper {
+  background-color: #FED400;
   width: 60%;
-  padding: 20px;
-  max-width: 400px;
+  padding: 40px;
+  max-width: 800px;
 }
 @media screen and (max-width: 600px) {
   .culture .wrapper {
@@ -1271,7 +1284,7 @@ p.copyright {
 }
 .culture .button {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 600px) {
   .culture {
