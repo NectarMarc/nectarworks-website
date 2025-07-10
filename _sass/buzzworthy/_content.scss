@@ -269,6 +269,7 @@
     }
 
     @include media-query($on-800) {
+        background-image: url('/assets/jpg/hexagon-banner-alt.jpg');
         flex-direction: column;
     }
 }

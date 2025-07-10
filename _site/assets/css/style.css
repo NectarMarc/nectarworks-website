@@ -980,6 +980,7 @@ p.copyright {
 }
 @media screen and (max-width: 800px) {
   .intro {
+    background-image: url("/assets/jpg/hexagon-banner-alt.jpg");
     flex-direction: column;
   }
 }
