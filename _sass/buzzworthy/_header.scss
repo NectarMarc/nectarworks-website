@@ -57,7 +57,7 @@
 	flex-direction: column;
 	justify-content: center;
 	height: $spacer * 6;
-	width: 140px;
+	width: 200px;
 	background-size: contain;
 	margin: $spacer 0 $spacer $spacer * 0.5;
 	transition: height 0.3s ease, width 0.3s ease;
@@ -73,16 +73,14 @@
   
 	.site-header.scrolled & {
 	  height: $spacer * 4.5;
-	  width: 110px;
+	  width: 140px;
 	}
   
 	@include media-query($on-500) {
 	  margin-left: $spacer;
-	  width: $spacer * 10;
   
 	  .site-header.scrolled & {
 		height: $spacer * 3.5;
-		width: 90px;
 	  }
 	}
   }
