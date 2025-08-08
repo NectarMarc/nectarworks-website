@@ -13,7 +13,7 @@
             <p>This is a space defined by creativity, experimentation, and relentless change. We embrace the best tools and emerging technologies to stay ahead of the curve, constantly pushing the boundaries of what’s possible.</p>
             <p>The pace is fast, the challenges are meaningful, and the opportunity to shape the future is ours.</p>
         </div>
-        <a href="/#cta" class="button button-alt animate-rise">Join the hive</a>
+        <a href="/#vacancies" class="button button-alt animate-rise">Join the hive</a>
     </div>
     <!-- <div class="culture-img-bottom"></div> -->
 </div>

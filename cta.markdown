@@ -5,7 +5,7 @@
             <h3 animate-rise>
                 Join the Hive!
             </h3>
-            <a href="mailto:contact@nectarworks.io" class="button animate-rise scroll" target="_blank" rel="nofollower noopener noreferrer" alt="Vacancies">Send your details</a>
+            <a href="/#vacancies" class="button animate-rise scroll" target="_blank" rel="nofollower noopener noreferrer" alt="Vacancies">Explore Our Vacancies</a>
         </div>
     </div>
 </div>
