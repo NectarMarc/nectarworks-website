@@ -16,5 +16,6 @@ id: home
 {%- include_relative whatweoffer.markdown -%}
 <div id="culture"></div>
 {%- include_relative whyjoinus.markdown -%}
+{%- include_relative vacancies.markdown -%}
 <div id="cta"></div>
 {%- include_relative cta.markdown -%}

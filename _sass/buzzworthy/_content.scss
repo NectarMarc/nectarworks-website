@@ -60,65 +60,6 @@
     }
 }
 
-.c-lines {
-    background-image: url('/assets/png/divider-lines.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: repeat-x;
-    height: 20px;
-    max-width: calc(#{$content-width} - (#{$spacer}));
-    margin-right: auto;
-    margin-left: auto;
-    @extend %clearfix;
-  
-    @media screen and (min-width: $on-800) {
-      max-width: calc(#{$content-width} - (#{$spacer} *2));
-    }
-}
-
-.c-lines-full {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.c-lines-short {
-    height: 4px;
-    width: auto;
-}
-
-.grey-line {
-    background-color: $grey;
-    height: 1px;
-    max-width: calc(#{$content-width} - (#{$spacer *2}));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacer;
-    padding-left: $spacer;
-    @extend %clearfix;
-}
-
-.diagonal-pattern {
-    background-image: repeating-linear-gradient(
-      45deg,              /* top-left to bottom-right */
-      #000 0px,           /* line color start */
-      #000 1px,           /* line color end */
-      transparent 1px,    /* space between lines start */
-      transparent 10px    /* space between lines end */
-    );
-}
-
-.diagonal-pattern-inverted {
-    background-image: repeating-linear-gradient(
-      45deg,              /* top-left to bottom-right */
-      #fff 0px,           /* line color start */
-      #fff 1px,           /* line color end */
-      transparent 1px,    /* space between lines start */
-      transparent 10px    /* space between lines end */
-    );
-}
-  
-
 .area {
     min-height: calc(100vh - 50px);
     padding: 40px;
@@ -166,45 +107,6 @@
     height: 80px;
     text-align: center;
     font-variation-settings: 'FILL' 1;    
-}
-
-.background-video {
-    position: relative;
-    overflow: hidden;
-    height: 500px;
-    color: white
-}
-  
-.background-video>video {
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    right: -100%;
-    bottom: -100%;
-    top: -100%;
-    left: -100%;
-    object-fit: cover;
-    z-index: -100;
-}
-  
-.background-video>video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none
-}
-  
-.background-video {
-    display: block;
-    width: 100%;
-    height: 100vh;
-}
-  
-@media screen and (max-width: 991px) {
-    .background-video {
-        display: block;
-    }
 }
 
 .intro {
@@ -271,74 +173,6 @@
     @include media-query($on-800) {
         background-image: url('/assets/jpg/hexagon-banner-alt.jpg');
         flex-direction: column;
-    }
-}
-
-.job-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: $spacer *4 0;
-
-    .job-link {
-        margin-bottom: $spacer *2;
-
-        .material-symbols-outlined {
-            color: $tertiary;
-            display: block;
-            font-size: 3em;
-            margin-bottom: $spacer;
-        }
-    }
-
-    .job-link-title {
-        font-size: 1.2em;
-    }
-}
-
-.jobs {
-    background: #00DEFF;
-    background: linear-gradient(180deg, rgba(0, 222, 255, 1) 0%, rgba(216, 81, 240, 1) 100%);
-    background-image: url('/assets/jpg/bg-tiles.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    min-height: calc(100vh - #{$spacer * 5});
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: $white;
-        padding: $spacer * 6;
-        border-radius: $spacer * 2;
-        box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
-        min-width: 60vw;
-
-        @include media-query($on-800) {
-            margin: 40px;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        @include media-query($on-600) {
-            margin: 60px 20px;
-            padding: 30px;
-        }
-    }
-    .button {
-        display: inline-block;
-        margin-top: $spacer * 4;
-    }
-
-    @include media-query($on-800) {
-        min-height: auto;
-        padding: 0;
     }
 }
 
@@ -433,8 +267,8 @@
         margin-top: $spacer * 4;
     }
 
-    @include media-query($on-600) {
-        background-size: 150px, 150px, auto;
+    @include media-query($on-700) {
+        background-size: 200px, 200px, auto;
     }
 }
 
@@ -562,10 +396,21 @@
         }
     }
     .wrapper {
-        background-color: $yellow;
+        background-color: $black;
+        color: $white;
         width: 60%;
         padding: $spacer * 4;
         max-width: $spacer * 80;
+
+        h4 {
+            display: flex;
+            gap: 10px;
+            color: $yellow;
+
+            .material-symbols-outlined {
+                rotate: 90deg;
+            }
+        }
 
         @include media-query($on-600) {
             width: auto;
@@ -577,72 +422,110 @@
     }
     @include media-query($on-600) {
        flex-direction: column;
+       min-height: auto;
     }
 }
 
-// .culture {
-//     display: flex;
-//     align-items: center;
-//     background-color: $yellow;
-//     color: $text-color;
-//     padding: 0;
 
-//     p {
-//         font-size: 0.8rem;
-//         text-transform: uppercase;
-//     }
-//     h4 {
-//         margin-top: $spacer * 4;
-//     }
 
-    
-//     .culture-img-top {
-//         display: flex;
-//         background-image: url('/assets/png/honeycomb_border_repeat.png');
-//         background-position: center;
-//         background-repeat: repeat;
-//         background-size: auto;
-//         width: 20%;
-//         height: -webkit-fill-available;
-//         min-height: 20px;
+.job-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: $spacer *4 0;
 
-//         @include media-query($on-600) {
-//             width: 100%;
-//             height: 15vh;
-//         }
-//     }
-//     .culture-img-bottom {
-//         display: flex;
-//         background-image: url('/assets/png/tiny-bee.png'), url('/assets/png/honeycomb_border_repeat.png');
-//         background-position: center, center;
-//         background-repeat: no-repeat, repeat;
-//         background-size: 30px, auto;
-//         width: 20%;
-//         height: -webkit-fill-available;
-//         min-height: 20px;
+    .job-link {
+        margin-bottom: $spacer *2;
 
-//         @include media-query($on-600) {
-//             width: 100%;
-//             height: 15vh;
-//         }
-//     }
-//     .wrapper {
-//         width: 60%;
-//         padding: $spacer * 2;
-//         max-width: 400px;
+        .material-symbols-outlined {
+            color: $tertiary;
+            display: block;
+            font-size: 3em;
+            margin-bottom: $spacer;
+        }
+    }
 
-//         @include media-query($on-600) {
-//             width: auto;
-//         }
-//     }
-//     .button {
-//         display: inline-block;
-//         margin-top: $spacer * 4;
-//     }
-//     @include media-query($on-600) {
-//        flex-direction: column;
-//     }
-// }
+    .job-link-title {
+        font-size: 1.2em;
+    }
+}
+
+.jobs {
+    background-color: $black;
+    background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg), url('/assets/png/honeycomb_border_repeat.png');
+    background-position: top left, bottom right, center;
+    background-attachment: fixed;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: 300px, 300px, auto;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - #{$spacer * 5});
+
+    .wrapper {
+        background-color: $yellow !important;
+        color: $black !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        padding: $spacer * 6;
+        box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
+        min-width: 60vw;
+
+        @include media-query($on-800) {
+            margin: 40px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @include media-query($on-600) {
+            margin: 0;
+            min-height: calc(100vh * 0.6);
+            width: -webkit-fill-available;
+        }
+
+        h2,
+        ul {
+            border-bottom: none !important;
+        }
+        h2,
+        #BambooHR > div:last-child {
+            color: $black !important;
+        }
+
+        li#bhrDepartmentID_18586 {
+            background-color:  black;
+            color: $white;
+            border-radius: 6px;
+            padding: $spacer;
+        }
+
+        li a,
+        li a:visited {
+            color: $yellow;
+            display: block;
+
+            &:hover {
+                color: $white;
+            }
+        }
+        li span {
+            color: $white;
+            float: none !important;
+        }
+    }
+
+    @include media-query($on-800) {
+        min-height: auto;
+        padding: 0;
+    }
+
+    @include media-query($on-700) {
+        background-size: 200px, 200px, auto;
+    }
+}
 
 .cta {
     background-color: $grey;

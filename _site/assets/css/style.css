@@ -305,12 +305,6 @@ pre > code {
 /**
  * Clearfix
  */
-.grey-line:after, .c-lines:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /**
  * Icons
  */
@@ -786,51 +780,6 @@ p.copyright {
   transition: ease 0.5s;
 }
 
-.c-lines {
-  background-image: url("/assets/png/divider-lines.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: repeat-x;
-  height: 20px;
-  max-width: calc(1200px - (10px));
-  margin-right: auto;
-  margin-left: auto;
-}
-@media screen and (min-width: 800px) {
-  .c-lines {
-    max-width: calc(1200px - 10px * 2);
-  }
-}
-
-.c-lines-full {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.c-lines-short {
-  height: 4px;
-  width: auto;
-}
-
-.grey-line {
-  background-color: #6D6C67;
-  height: 1px;
-  max-width: calc(1200px - (20px));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.diagonal-pattern {
-  background-image: repeating-linear-gradient(45deg, #000 0px, #000 1px, transparent 1px, transparent 10px);
-}
-
-.diagonal-pattern-inverted {
-  background-image: repeating-linear-gradient(45deg, #fff 0px, #fff 1px, transparent 1px, transparent 10px);
-}
-
 .area {
   min-height: calc(100vh - 50px);
   padding: 40px;
@@ -881,44 +830,6 @@ p.copyright {
   font-variation-settings: "FILL" 1;
 }
 
-.background-video {
-  position: relative;
-  overflow: hidden;
-  height: 500px;
-  color: white;
-}
-
-.background-video > video {
-  background-size: cover;
-  background-position: 50% 50%;
-  position: absolute;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  right: -100%;
-  bottom: -100%;
-  top: -100%;
-  left: -100%;
-  object-fit: cover;
-  z-index: -100;
-}
-
-.background-video > video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none;
-}
-
-.background-video {
-  display: block;
-  width: 100%;
-  height: 100vh;
-}
-
-@media screen and (max-width: 991px) {
-  .background-video {
-    display: block;
-  }
-}
 .intro {
   background-image: url("/assets/jpg/hexagon-banner.jpg");
   background-size: cover;
@@ -980,73 +891,6 @@ p.copyright {
   .intro {
     background-image: url("/assets/jpg/hexagon-banner-alt.jpg");
     flex-direction: column;
-  }
-}
-
-.job-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 40px 0;
-}
-.job-links .job-link {
-  margin-bottom: 20px;
-}
-.job-links .job-link .material-symbols-outlined {
-  color: #3AFF7C;
-  display: block;
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-.job-links .job-link-title {
-  font-size: 1.2em;
-}
-
-.jobs {
-  background: #00DEFF;
-  background: linear-gradient(180deg, rgb(0, 222, 255) 0%, rgb(216, 81, 240) 100%);
-  background-image: url("/assets/jpg/bg-tiles.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  min-height: calc(100vh - 50px);
-}
-.jobs .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #FFF;
-  padding: 60px;
-  border-radius: 20px;
-  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
-  min-width: 60vw;
-}
-@media screen and (max-width: 800px) {
-  .jobs .wrapper {
-    margin: 40px;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .jobs .wrapper {
-    margin: 60px 20px;
-    padding: 30px;
-  }
-}
-.jobs .button {
-  display: inline-block;
-  margin-top: 40px;
-}
-@media screen and (max-width: 800px) {
-  .jobs {
-    min-height: auto;
-    padding: 0;
   }
 }
 
@@ -1141,9 +985,9 @@ p.copyright {
   display: inline-block;
   margin-top: 40px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .identity {
-    background-size: 150px, 150px, auto;
+    background-size: 200px, 200px, auto;
   }
 }
 
@@ -1271,10 +1115,19 @@ p.copyright {
   }
 }
 .culture .wrapper {
-  background-color: #FED400;
+  background-color: #141414;
+  color: #FFF;
   width: 60%;
   padding: 40px;
   max-width: 800px;
+}
+.culture .wrapper h4 {
+  display: flex;
+  gap: 10px;
+  color: #FED400;
+}
+.culture .wrapper h4 .material-symbols-outlined {
+  rotate: 90deg;
 }
 @media screen and (max-width: 600px) {
   .culture .wrapper {
@@ -1288,6 +1141,103 @@ p.copyright {
 @media screen and (max-width: 600px) {
   .culture {
     flex-direction: column;
+    min-height: auto;
+  }
+}
+
+.job-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+.job-links .job-link {
+  margin-bottom: 20px;
+}
+.job-links .job-link .material-symbols-outlined {
+  color: #3AFF7C;
+  display: block;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.job-links .job-link-title {
+  font-size: 1.2em;
+}
+
+.jobs {
+  background-color: #141414;
+  background-image: url(/assets/svg/corner-hex-outline.svg), url(/assets/svg/corner-hex-outline-alt.svg), url("/assets/png/honeycomb_border_repeat.png");
+  background-position: top left, bottom right, center;
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 300px, 300px, auto;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 50px);
+}
+.jobs .wrapper {
+  background-color: #FED400 !important;
+  color: #141414 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  padding: 60px;
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.3);
+  min-width: 60vw;
+}
+@media screen and (max-width: 800px) {
+  .jobs .wrapper {
+    margin: 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .jobs .wrapper {
+    margin: 0;
+    min-height: 60vh;
+    width: -webkit-fill-available;
+  }
+}
+.jobs .wrapper h2,
+.jobs .wrapper ul {
+  border-bottom: none !important;
+}
+.jobs .wrapper h2,
+.jobs .wrapper #BambooHR > div:last-child {
+  color: #141414 !important;
+}
+.jobs .wrapper li#bhrDepartmentID_18586 {
+  background-color: black;
+  color: #FFF;
+  border-radius: 6px;
+  padding: 10px;
+}
+.jobs .wrapper li a,
+.jobs .wrapper li a:visited {
+  color: #FED400;
+  display: block;
+}
+.jobs .wrapper li a:hover,
+.jobs .wrapper li a:visited:hover {
+  color: #FFF;
+}
+.jobs .wrapper li span {
+  color: #FFF;
+  float: none !important;
+}
+@media screen and (max-width: 800px) {
+  .jobs {
+    min-height: auto;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .jobs {
+    background-size: 200px, 200px, auto;
   }
 }
 

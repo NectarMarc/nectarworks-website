@@ -80,3 +80,14 @@
   header.style.backgroundColor = `rgba(${interpolatedColor.join(',')})`;
 });
 </script>
+
+<!-- Open BambooHR Links in New Tab -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bambooLink = document.querySelector('#BambooHR > div:last-child a');
+    if (bambooLink) {
+      bambooLink.setAttribute('target', '_blank');
+      bambooLink.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+</script>
